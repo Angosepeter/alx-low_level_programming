@@ -1,3 +1,4 @@
+#include <main.c>
 #include "holberton.h"
 /**
  * main - Entry point
