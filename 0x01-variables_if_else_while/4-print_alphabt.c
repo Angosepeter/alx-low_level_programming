@@ -1,23 +1,24 @@
 #include <stdio.h>
 /**
- * main - Entry point
- * Description: 'print alphabets except q and e
- * Return always 0
+ * main - entry point
+ * Description: 'program that prints alphabets except e and q'
+ * Return: always 0
  */
 int main(void)
 {
-	int n = 97;
+	int a = 97;
 
-	while (n <= 122)
+	while (a <= 122)
 	{
-		if (n == 101 || n == 113)
+
+		if (a == 101 || a == 113)
 		{
-			n++;
+			a++;
 			continue;
 		}
-		putchar(n);
-		n++;
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
-		return (0);
+	return (0);
 }
