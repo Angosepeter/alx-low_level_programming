@@ -1,26 +1,34 @@
 #include <stdio.h>
-/**main - Entry main point.
- * Descritption : 'program tat prints new random integer eac time it is printes'
- * Return o - always
+
+/**
+ * main - Prints all possible combinations of two two-digit numbers,
+ *        ranging from 0-99, separated by a comma followed by a space.
+ *
+ * Return: Always 0.
  */
+int main(void)
+{
+	int num1, num2;
 
-int main() {
-    int i, j;
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
 
-    for (i = 0; i < 100; i++) {
-        for (j = i; j < 100; j++) {
-            putchar((i / 10) + '0');
-            putchar((i % 10) + '0');
-            putchar(' ');
-            putchar((j / 10) + '0');
-            putchar((j % 10) + '0');
+			if (num1 == 98 && num2 == 99)
+				continue;
 
-            if (i != 99 || j != 99) {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-    }
+			putchar(',');
+			putchar(' ');
+		}
+	}
 
-    return 0;
+	putchar('\n');
+
+	return (0);
 }
