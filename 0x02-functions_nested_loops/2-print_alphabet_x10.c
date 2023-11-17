@@ -1,18 +1,19 @@
-#include "holberton.h"
-
+#include "main.h"
 /**
- * add - adds two integers
- * @n1: integer 1
- * @n2: integer 2
- * Description: give two integers, returns sum
- * Return: sum
+ * main: - 'Entry point'
+ * Description: 'prints alphabets in lowercase 10times'
+ *
+ * Return: Always o
  */
-
-int add(int n1, int n2)
+void print_alphabet_x10(void)
 {
-	int sum;
+	int count = 0;
+	char letter;
 
-	sum = n1 + n2;
-
-	return (sum);
+	while (count++ <= 9)
+	{
+		for (letter = 'a'; letter <= 'z'; letter++)
+			_putchar(letter);
+		_putchar('\n');
+	}
 }
